@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bobochic Paris — Vous voilà entre deux pièces</title>
+<meta name="description" content="Profitez d'un instant pour découvrir nos pièces les plus aimées : meilleures ventes, soldes et nouveautés Bobochic Paris."/>
+<meta name="robots" content="noindex"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER — Meridian official `.bh` component (variant: solid)
+     Source : preview/components-header.html, corentindw/meridian@main
+     ============================================================ -->
+<header class="bh solid">
+  <!-- Bandeau (3 messages rotatifs + duplicata pour loop seamless) -->
+  <div class="bh-bandeau">
+    <div class="track">
+      <span><strong>Bénéficiez de la livraison différée.</strong></span>
+      <span>Jusqu'à <strong>−40%</strong> sur la Nouvelle Collection.</span>
+      <span><strong>Paiement en 4× sans frais.</strong></span>
+      <span><strong>Bénéficiez de la livraison différée.</strong></span>
+    </div>
+  </div>
+
+  <!-- Desktop : burger + logo + search + actions -->
+  <div class="bh-search-row">
+    <button class="bh-icon-btn burger" aria-label="Menu"><img src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/menu-burger.svg" alt=""></button>
+    <a class="logo" href="#"><span class="bh-logo" role="img" aria-label="Bobochic Paris"></span></a>
+    <div class="bh-search">
+      <img class="search-icon" src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/magnifying-glass.svg" alt="">
+      <input placeholder="Rechercher un canapé, un lit, un matelas…"/>
+    </div>
+    <div class="bh-actions">
+      <button class="bh-btn-white"><img src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/store.svg" alt="">Magasins</button>
+      <button class="bh-btn-white"><img src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/headphones.svg" alt="">Nous contacter</button>
+      <button class="bh-icon-btn" aria-label="Mon compte"><img src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/user.svg" alt=""></button>
+      <button class="bh-icon-btn" aria-label="Mon panier"><img src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/shopping-bag.svg" alt=""><span class="badge">2</span></button>
+    </div>
+  </div>
+
+  <!-- Tablet + mobile : barre compacte logo centré (desktop hides this via CSS) -->
+  <div class="bh-top">
+    <div class="left">
+      <button class="bh-icon-btn" aria-label="Menu"><img src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/menu-burger.svg" alt=""></button>
+    </div>
+    <a class="logo" href="#"><span class="bh-logo" role="img" aria-label="Bobochic"></span></a>
+    <div class="right">
+      <button class="bh-icon-btn" aria-label="Magasins"><img src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/store.svg" alt=""></button>
+      <button class="bh-icon-btn" aria-label="Nous contacter"><img src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/headphones.svg" alt=""></button>
+      <button class="bh-icon-btn" aria-label="Mon compte"><img src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/user.svg" alt=""></button>
+      <button class="bh-icon-btn" aria-label="Mon panier"><img src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/shopping-bag.svg" alt=""><span class="badge">2</span></button>
+    </div>
+  </div>
+
+  <!-- Desktop nav -->
+  <nav class="bh-nav">
+    <a class="sale" href="#">Soldes</a>
+    <a href="#">Livraison express</a>
+    <a class="active" href="#">Nouveautés</a>
+    <a href="#">Vos intérieurs</a>
+    <a href="#">Services <img class="caret" src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/caret-down.svg" alt=""></a>
+    <a href="#"><img class="nav-logo-espace-pro" src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/logo-espace-pro.svg" alt="Espace pro"><img class="caret" src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/caret-down.svg" alt=""></a>
+  </nav>
+
+  <!-- Tablet + mobile : search row sous le bh-top -->
+  <div class="bh-search-mobile">
+    <div class="bh-search">
+      <img class="search-icon" src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/magnifying-glass.svg" alt="">
+      <input placeholder="Rechercher…"/>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO — Éditorial light (pas de "erreur" / "404", pas de fond)
+     ============================================================ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__inner">
+    <h1 id="hero-title" class="display-xl hero__title">
+      <span class="display-xl-strong">Désolé,</span> Il n'y a rien ici pour l'instant…
+    </h1>
+
+    <div class="hero__ctas">
+      <a href="#" class="btn btn--primary btn--md utility-button-md">Retour à l'accueil</a>
+      <a href="#" class="btn btn--outline btn--md utility-button-md">Parler à un conseiller</a>
+    </div>
+  </div>
+
+  <!-- Tuiles catégories — extraites du conteneur 920px pour prendre toute la largeur du hero -->
+  <div class="hero__suggest">
+    <div class="text-sm-regular hero__suggest-label">Essayez l'une de ces pages :</div>
+    <div class="hero__suggest-grid" data-hero-cats></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RECO — Carrousel produits
+     ============================================================ -->
+<section class="reco" id="reco">
+  <div class="reco__head">
+    <div>
+      <h2 class="heading-title-md reco__title" data-reco-title>Nos meilleures ventes en ce moment</h2>
+    </div>
+
+    <div class="segmented" role="tablist" aria-label="Type de recommandation">
+      <button role="tab" aria-selected="true"  class="utility-button-md segmented__tab is-active" data-reco-tab="bestsellers">Meilleures ventes</button>
+      <button role="tab" aria-selected="false" class="utility-button-md segmented__tab"            data-reco-tab="soldes">Soldes</button>
+      <button role="tab" aria-selected="false" class="utility-button-md segmented__tab"            data-reco-tab="nouveautes">Nouveautés</button>
+    </div>
+  </div>
+
+  <div class="reco__viewport">
+    <button class="carousel-arrow carousel-arrow--prev" aria-label="Précédent" data-carousel-dir="-1">
+      <img class="icon icon--sm" src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/arrow-left.svg" alt=""/>
+    </button>
+    <div class="reco__track" data-reco-track></div>
+    <button class="carousel-arrow carousel-arrow--next" aria-label="Suivant" data-carousel-dir="1">
+      <img class="icon icon--sm" src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/arrow-right.svg" alt=""/>
+    </button>
+  </div>
+
+  <div class="reco__dots" data-reco-dots aria-hidden="true"></div>
+
+  <div class="reco__more">
+    <a href="#" class="btn btn--primary btn--md utility-button-md">
+      <span>Voir plus de produits</span>
+      <img class="icon icon--sm icon--invert" src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/caret-right.svg" alt=""/>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="site-footer__grid">
+    <div class="site-footer__brand">
+      <img class="site-footer__logo" src="https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/logo-bobochicparis.svg" alt="Bobochic Paris"/>
+      <p class="text-md-regular site-footer__pitch">
+        Des meubles pensés pour durer, conçus en France et fabriqués avec les meilleurs tapissiers d'Europe.
+      </p>
+      <div class="site-footer__newsletter">
+        <div class="heading-subtitle-sm site-footer__col-title">Recevez notre newsletter</div>
+        <form onsubmit="event.preventDefault()">
+          <input class="text-md-regular" type="email" placeholder="votre email" aria-label="Votre email"/>
+          <button type="submit" class="btn btn--white btn--md utility-button-md">S'inscrire</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="site-footer__col">
+      <div class="heading-subtitle-sm site-footer__col-title">Service client</div>
+      <ul>
+        <li><a class="text-md-regular" href="#">Nous contacter</a></li>
+        <li><a class="text-md-regular" href="#">Livraison &amp; montage</a></li>
+        <li><a class="text-md-regular" href="#">Retours &amp; SAV</a></li>
+        <li><a class="text-md-regular" href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="site-footer__col">
+      <div class="heading-subtitle-sm site-footer__col-title">À propos</div>
+      <ul>
+        <li><a class="text-md-regular" href="#">Le manifeste</a></li>
+        <li><a class="text-md-regular" href="#">Nos ateliers</a></li>
+        <li><a class="text-md-regular" href="#">Carrières</a></li>
+        <li><a class="text-md-regular" href="#">Presse</a></li>
+      </ul>
+    </div>
+    <div class="site-footer__col">
+      <div class="heading-subtitle-sm site-footer__col-title">Espace pro</div>
+      <ul>
+        <li><a class="text-md-regular" href="#">Hôtellerie &amp; CHR</a></li>
+        <li><a class="text-md-regular" href="#">Architectes</a></li>
+        <li><a class="text-md-regular" href="#">Devenir partenaire</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="text-sm-regular site-footer__base">
+    <span>© 2026 Bobochic Paris SAS · 12 rue d'Enghien, 75010 Paris</span>
+    <div>
+      <a href="#">CGV</a><a href="#">Mentions légales</a><a href="#">Confidentialité</a><a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+<script>
+/* ===== Meridian `.bh` header — responsive class bridge =====
+   Meridian publishes layout variants as `.bh.tablet` / `.bh.mobile` —
+   the host page is expected to toggle these based on its breakpoints. */
+(() => {
+  const bh = document.querySelector(".bh");
+  if (!bh) return;
+  const apply = () => {
+    const w = window.innerWidth;
+    bh.classList.toggle("mobile", w <= 640);
+    bh.classList.toggle("tablet", w > 640 && w <= 1024);
+  };
+  apply();
+  window.addEventListener("resize", apply);
+})();
+
+/* ===== Products data ===== */
+const PRODUCTS = [
+  { id:"nihad", name:"NIHAD", sub:"Canapé d'angle réversible convertible coffre", price:1099, original:1199, discount:10,
+    photo:"linear-gradient(135deg,#e8dccb 0%,#b7a48a 55%,#7e6a52 100%)", rating:4.6, reviews:1254, colors:7,
+    flags:["livraison-rapide","top-vente"], isNew:false, fr:true },
+  { id:"elysee", name:"ELYSÉE", sub:"Buffet 3 portes 180 cm effet chêne et marbre noir", price:249, original:499, discount:50,
+    photo:"linear-gradient(135deg,#dcd0b8 0%,#9c8264 60%,#3a3128 100%)", rating:4.2, reviews:5, inStock:true,
+    flags:["soldes"], isNew:false, fr:false },
+  { id:"bourbon", name:"BOURBON", sub:"Pouf BOURBON tissu texturé recyclé", price:299,
+    photo:"linear-gradient(135deg,#f6f1e8 0%,#dccfb9 60%,#a89880 100%)", rating:4.7, reviews:88, colors:7, inStock:true,
+    flags:["nouveau"], isNew:true, fr:true },
+  { id:"monceau", name:"MONCEAU", sub:"Canapé 3 places · bouclette écru", price:1390,
+    photo:"linear-gradient(135deg,#f0e7d3 0%,#c9bb9e 55%,#8a7d63 100%)", rating:4.5, reviews:192, colors:5,
+    flags:["nouveau"], isNew:true, fr:true },
+  { id:"faubourg", name:"FAUBOURG", sub:"5 places · cuir pleine fleur cognac", price:2890, original:3490, discount:17,
+    photo:"linear-gradient(135deg,#c8814e 0%,#834e2b 55%,#3d2113 100%)", rating:4.9, reviews:412, colors:3,
+    flags:["livraison-rapide","top-vente"], isNew:false, fr:false },
+  { id:"lune", name:"LUNE", sub:"Canapé convertible 3 places bouclette", price:1190, original:1490, discount:20,
+    photo:"linear-gradient(135deg,#f4ecdc 0%,#cfc2a6 60%,#88795f 100%)", rating:4.6, reviews:642, colors:4,
+    flags:["soldes","top-vente"], isNew:false, fr:true },
+  { id:"atelier", name:"ATELIER", sub:"Fauteuil lin lavé · ocre", price:790,
+    photo:"linear-gradient(135deg,#dca871 0%,#9d6c3f 60%,#4f3219 100%)", rating:4.8, reviews:64, colors:4,
+    flags:["nouveau"], isNew:true, fr:true },
+  { id:"saint-germain", name:"SAINT-GERMAIN", sub:"Lit 160 · velours sauge", price:890, original:1190, discount:25,
+    photo:"linear-gradient(135deg,#b4c2a8 0%,#6d7d63 60%,#3a4434 100%)", rating:4.6, reviews:148, colors:3,
+    flags:["soldes"], isNew:false, fr:false },
+];
+
+const RECO_TITLES = {
+  bestsellers: "Nos meilleures ventes en ce moment",
+  soldes:      "Nos meilleures affaires",
+  nouveautes:  "Nos nouveautés à découvrir",
+};
+
+function productsByMode(mode) {
+  switch (mode) {
+    case "soldes":     return PRODUCTS.filter(p => p.discount).sort((a,b) => b.discount - a.discount);
+    case "nouveautes": return [...PRODUCTS.filter(p => p.isNew), ...PRODUCTS.filter(p => !p.isNew)];
+    default:           return [...PRODUCTS].sort((a,b) => (b.reviews||0) - (a.reviews||0));
+  }
+}
+
+/* Format prix Meridian : 1 099 € avec espace insécable ( ) avant l'euro */
+function fmtEUR(n) {
+  return n.toLocaleString("fr-FR").replace(/ | |,/g, " ") + " €";
+}
+
+const ICON_BASE = "https://cdn.jsdelivr.net/gh/corentindw/meridian@main/assets/icons/";
+
+/* utility-flag = Meridian flag/badge class. Couleurs Meridian only. */
+function flagHtml(flag) {
+  const map = {
+    "livraison-rapide": { icon:"truck.svg", label:"Livraison rapide", cls:"product-flag" },
+    "top-vente":        { icon:"star.svg",  label:"Top vente",        cls:"product-flag" },
+    "nouveau":          { icon:null,        label:"Nouveau",          cls:"product-flag product-flag--red" },
+    "soldes":           { icon:null,        label:"Soldes",           cls:"product-flag product-flag--dark" },
+  };
+  const m = map[flag]; if (!m) return "";
+  const ic = m.icon ? `<img class="icon icon--sm" src="${ICON_BASE}${m.icon}" alt=""/>` : "";
+  return `<span class="utility-flag ${m.cls}">${ic}${m.label}</span>`;
+}
+
+function starsHtml(rating, reviews) {
+  let s = "";
+  for (let i=1; i<=5; i++) {
+    s += `<img class="icon icon--sm" src="${ICON_BASE}${i <= Math.round(rating) ? "star.svg" : "star-outline.svg"}" alt=""/>`;
+  }
+  return `<div class="product-rating">${s}<span class="text-sm-regular">(${reviews})</span></div>`;
+}
+
+function cardHtml(p) {
+  const flags = (p.flags || []).map(flagHtml).join("");
+  return `
+    <article class="product-card">
+      <div class="product-card__media" style="background:${p.photo}">
+        <div class="product-card__overlay" aria-hidden="true"></div>
+        ${p.fr ? `
+        <div class="utility-flag product-card__fr">
+          <span class="product-card__flag-fr" aria-hidden="true"></span>
+          <span>Fabrication française</span>
+        </div>` : ""}
+      </div>
+      <div class="product-card__body">
+        <div class="product-card__head">
+          <div class="utility-product-md product-card__name">${p.name}</div>
+          ${p.inStock ? `<span class="utility-flag product-card__stock"><span class="product-card__stock-dot"></span>En stock</span>` : ""}
+        </div>
+        <div class="text-sm-regular product-card__sub">${p.sub}</div>
+        <div class="product-card__price-row">
+          <div class="product-card__prices">
+            <span class="text-lg-strong product-card__price ${p.discount ? "product-card__price--red" : ""}">${fmtEUR(p.price)}</span>
+            ${p.original ? `<span class="text-md-strike product-card__price-old">${fmtEUR(p.original)}</span><span class="utility-flag product-card__discount">−${p.discount}%</span>` : ""}
+          </div>
+          ${p.colors ? `<span class="text-sm-regular product-card__colors">+ ${p.colors} couleurs</span>` : ""}
+        </div>
+        ${p.rating ? starsHtml(p.rating, p.reviews) : ""}
+        <div class="product-card__flags">${flags}</div>
+      </div>
+    </article>`;
+}
+
+/* ===== Carousel ===== */
+const track = document.querySelector("[data-reco-track]");
+const dots  = document.querySelector("[data-reco-dots]");
+const title = document.querySelector("[data-reco-title]");
+const tabs  = document.querySelectorAll("[data-reco-tab]");
+
+function renderReco(mode) {
+  const items = productsByMode(mode);
+  track.innerHTML = items.map(cardHtml).join("");
+  title.textContent = RECO_TITLES[mode];
+  tabs.forEach(t => {
+    const active = t.dataset.recoTab === mode;
+    t.classList.toggle("is-active", active);
+    t.setAttribute("aria-selected", active ? "true" : "false");
+  });
+  renderDots();
+}
+
+function renderDots() {
+  const first = track.querySelector(".product-card");
+  if (!first) { dots.innerHTML = ""; return; }
+  const cardW = first.getBoundingClientRect().width;
+  const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+  const step = cardW + gap;
+  const visible = Math.max(1, Math.floor(track.clientWidth / step));
+  const total = track.children.length;
+  const pages = Math.max(1, Math.ceil(total / visible));
+  const activePage = Math.round(track.scrollLeft / (step * visible));
+  dots.innerHTML = "";
+  for (let i=0; i<pages; i++) {
+    const d = document.createElement("span");
+    d.className = "reco__dot" + (i === activePage ? " is-active" : "");
+    dots.appendChild(d);
+  }
+}
+
+tabs.forEach(t => t.addEventListener("click", () => renderReco(t.dataset.recoTab)));
+
+document.querySelectorAll("[data-carousel-dir]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const dir = Number(btn.dataset.carouselDir);
+    const first = track.querySelector(".product-card");
+    if (!first) return;
+    const cardW = first.getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+    const step = cardW + gap;
+    const visible = Math.max(1, Math.floor(track.clientWidth / step));
+    track.scrollBy({ left: dir * step * visible, behavior: "smooth" });
+  });
+});
+
+track.addEventListener("scroll", () => {
+  clearTimeout(window.__recoScrollT);
+  window.__recoScrollT = setTimeout(renderDots, 90);
+});
+window.addEventListener("resize", renderDots);
+
+renderReco("bestsellers");
+
+/* ===== Hero category tiles ("Essayez l'une de ces pages :") =====
+   Réutilise le visuel .universe-tile, contenu = catégories principales Bobochic. */
+const HERO_CATS = [
+  { label: "Canapés",           grad: "linear-gradient(135deg,#d7c5a8,#7b6549)" },
+  { label: "Séjour",            grad: "linear-gradient(135deg,#e6dac3,#a18b69)" },
+  { label: "Chambre & literie", grad: "linear-gradient(135deg,#b4c2a8,#3a4434)" },
+  { label: "Déco",              grad: "linear-gradient(135deg,#c2cbc0,#6c7864)" },
+  { label: "Tapis",             grad: "linear-gradient(135deg,#caa176,#6e4824)" },
+  { label: "Jardin",            grad: "linear-gradient(135deg,#a8b89c,#3f5037)" },
+  { label: "Enfant & bébé",     grad: "linear-gradient(135deg,#d3c5d8,#7e6c8a)" },
+];
+document.querySelector("[data-hero-cats]").innerHTML = HERO_CATS.map(c => `
+  <a href="#" class="universe-tile" style="background:${c.grad}">
+    <span class="universe-tile__shade" aria-hidden="true"></span>
+    <span class="utility-product-xs universe-tile__label">
+      ${c.label}
+      <img class="icon icon--sm icon--invert" src="${ICON_BASE}arrow-right.svg" alt=""/>
+    </span>
+  </a>
+`).join("");
+
+</script>
+
+</body>
+</html>
